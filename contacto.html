@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contacto</title> 
+        <link rel="icon"                
+              href="img/contacto_icon.png"
+              type="image/png"
+              sizes="32x32">  
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/main2.js"></script>
+    </head>
+    <body class="contacto_background">
+    <!--************** Comienzo Menú de Navegación ***********-->
+    <div class="contenedor_menu">
+    <a href="index.html"><img class="logo" src="img/logo_nav.png"></a>
+    <ul class="nav">
+      <li><a href="#">Juegos</a>
+        <ul>
+          <li><a href="juegos_html/DOOM.html">DOOM ETERNAL</a></li>
+          <li><a href="juegos_html/DIABLO.html">DIABLO III</a></li>
+          <li><a href="juegos_html/ZELDA_BRAVES.html">ZELDA</a></li>
+          <li><a href="juegos_html/SLIME_GAL.html">SLIME RANCHER</a></li>
+        </ul>
+      </li> 
+      <li><a href="tienda_html/tienda.html">Tienda</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="#">Multimedia</a>
+        <ul>
+          <li><a href="multi_img_html/multimedia_img.html">Fotos</a></li>
+         <li><a href="multi_video_html/multimedia_vid.html">Vídeos</a></li>
+        </ul>
+     </li>     
+    </ul>
+  </div>
+  <div class="relleno_menu"></div>
+  <!--************* Fin Menú de navegación ****************-->
+  <!--*************** Comienzo Página de Contacto *****************-->
+     <div class="encabezado_formulario">
+      <h1>Información de Contacto</h1>
+    </div>
+    <!-- Contenedor con datos de contacto y mapa -->
+   <div class="texto_formulario">
+    <h3>Dirección:</h3>
+    <p>Universidad Europea de Madrid. Campus Villaviciosa de Odón. Calle Tajo S/N Villaviciosa de Odón. Madrid</p>
+    <br>
+    <h3>Teléfono:</h3>
+    <p>91 211 56 73</p>
+    <br>
+    <h3>Email:</h3>
+    <p>scdj@uem.es</p>
+    <br>
+    <h3>Horario:</h3>
+    <p>8:00 a 20:30 de Lunes a Viernes</p>
+    <br>
+    <!-- Mapa de Google -->
+    <h3>Mapa:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.614984121322!2d-3.9212714847436563!3d40.373060679370255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd419031a94d45e5%3A0x375a8b6ca7a1dc4c!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20Villaviciosa%20de%20Od%C3%B3n)!5e0!3m2!1ses!2ses!4v1582825760414!5m2!1ses!2ses" width="100%" height="355" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+   </div> 
+<!-- Contenedor formulario -->
+   <div class="formulario">
+    <h3>Escríbenos:</h3>
+    <p>Si tienes alguna duda o quieres solicitar información sobre alguno de nuestros productos rellena nuestro formulario online y nos pondremos en contacto contigo tan pronto como sea posible.</p>
+    <br>
+   <div class="formulario_borde">
+    <form name="formulario_contacto" method="post" action="mailto:raul.rodriguez@universidadeuropea.es" onsubmit="return validar();">
+      <label class="uno">Nombre(*):
+      <input type="text" name="nombre_formulario" id="nombre"></label>
+      <br><br>
+      <label>Apellidos(*):
+      <input type="text" name="apellido_uno_formulario" id="apellidos"></label>
+      <br><br>
+      <label>Correo Electrónico(*):
+      <input type="email" name="correo_formulario" id="correo"></label>
+      <br><br>
+      <label>Teléfono(*):
+      <input type="text" name="apellido_dos_formulario" id="telefono"></label>
+      <br><br>
+      <label>Razón por la cual nos contactas:
+      <br>
+      <input type="radio" name="Razón" value="S"> Soporte Técnico
+      <br>
+      <input type="radio" name="Razón" value="R"> Reclamación
+      <br>
+      <input type="radio" name="Razón" value="C"> Consulta General
+      <br>
+      <input type="radio" name="Razón" value="O" checked> Otro</label>
+      <br><br>
+      <label>Comentario:
+      <br>
+      <textarea cols="52" rows="5" maxlength="245"></textarea></label>
+      <br><br>
+      <div class="botones_formulario">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Resetear">
+      </div>
+    </form>
+  </div>
+  </div>
+  <!--*************** Fin Página de Contacto *****************-->
+  <!--*************** Comienzo Footer ********************-->
+  <footer>
+    <ul>
+      <li><a href="somos.html">Quiénes Somos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <section class="social">
+    	<a href="http://www.facebook.com" target="_blank"><img src="img/facebook_logo.jpg"></a>
+    	<a href="http://www.twitter.com" target="_blank"><img src="img/twitter_logo.jpg"></a>
+    	<a href="http://www.instagram.com" target="_blank"><img src="img/instagram_logo.png"></a>
+    </section>
+    </footer>
+    <div class="relleno_footer"></div>
+   <!--*************** Fin Footer ********************-->
+    </body>
+</html>

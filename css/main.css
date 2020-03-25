@@ -1,0 +1,1492 @@
+/* css pagina principal*/
+*{
+	padding:0px;
+	margin:0px;
+}
+/************** Comienzo Menú de Navegación ************/
+/* Contenedor Principal Menú */
+.contenedor_menu{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    height: 62px;
+    position: fixed;
+    z-index: 10;
+  }
+  /* Clase .nav que posiciona el menú y da tamaño a las letras */
+  .nav{
+    margin-left: 65%;
+    font-size: 110%;
+  }
+  /* Elemento ul dentro del contenedor */
+  .contenedor_menu ul{
+    list-style: none;
+  }
+  /* Elementos a dentro de .nav */
+  .nav a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+  }
+  /* Apariencia elementos a al pasar el ratón por encima */
+  .nav a:hover{
+    background-color: dimgray;
+    color: black;
+    transition: 0.3s;
+  }
+  /* Todos los elementos li que hay dentro de .nav */
+  .nav >li{
+    float: left;
+  }
+/*  Elementos ul que hay dentro de li */
+  .nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 124px;
+  }
+  /* Al pasar el ratón por encima de un elemento li se muestran todos los elementos ul 
+  que contiene en forma de bloque */
+  .nav li:hover >ul{
+    display: block;
+  }
+  /* Elementos li últimos que llevan a otras páginas */
+  .nav li ul li{
+    position: relative;
+    top: 0px;
+    z-index: 10;
+  }
+  /* Logo que acompaña al menú */
+  .logo{
+    margin-left: 0px;
+    float: left;
+    margin-left: 10%;
+    height: 60px;
+  }
+  .relleno_menu{
+    height: 62px;
+  }
+/************** Fin Menú de Navegación ************/
+/***** Fondo Index *****/
+.index_background{
+  background-image: url(../img/bg_dark.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/***** Fin Fondo Index *******/
+
+/*SLIDER MAIN*/
+
+.main_slider{                   /* contenedor para las imagenes */
+    height: 700px;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    color:firebrick;            /* color por defecto, a cambiar luego si procede */
+    
+}
+.main_slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;                                      /* 4 imagenes = 400% */  
+  animation:cambio 20s infinite alternate linear;   /* animacion llamada cambio, dura 20sg, infinita, alternando y en cambio lineal */
+}
+
+.main_slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.main_slider img {                                  /* cada img ocupa un 100% */
+  width: 100%;
+   
+}
+
+@keyframes cambio {                                 /* keyframes para movimiento del slider*/
+  0% {margin-left: 0;}                              /* 0-20 stay */
+  20% {margin-left: 0;}
+                                        /* 5% tiempo de moviento (sin curva de animacion) */
+  25% {margin-left: -100%;}                         /* 25-45 stay */
+  45% {margin-left: -100%;}
+                                        /* 5% tiempo de moviento (sin curva de animacion) */
+  50% {margin-left: -200%;}                         /* 50-70 stay */
+  70% {margin-left: -200%;}
+                                        /* 5% tiempo de moviento (sin curva de animacion) */
+  75% {margin-left: -300%;}                         /* 75-100 stay */
+  100% {margin-left: -300%;}
+}
+
+.slider_txt{                            /* datos del texto sobre las imagenes del slider */
+    position: absolute;
+    width: 80%;
+    margin: 50px;
+    
+}
+
+.slider_doom{                           /* datos singulares del texto doom en slider */
+    font-family: "doom";
+    text-decoration: none;
+    color:#ffeaee;
+    font-size: 40px;
+    
+}   
+.slider_diablo{                         /* datos singulares del texto diablo en slider */
+    font-family: "diablo";
+    text-decoration: none;
+    color:white;
+    font-size: 40px;
+    
+} 
+.slider_zelda{                          /* datos singulares del texto zelda en slider */
+    font-family: "zelda";
+    text-decoration: none;
+    color:#6c8000;
+    font-size: 30px;
+    
+} 
+.slider_slime{                          /* datos singulares del texto slime en slider */
+    font-family: "slime";
+    text-decoration: none;
+    color:crimson;
+    font-size: 60px;
+    text-shadow: 1px 1px 2px white;
+} 
+/******* Comienzo Footer **********/
+
+
+/* Contenedor principal footer */
+footer{
+    background-color: black;
+    clear: both;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 50px;
+    position: fixed;
+   
+}
+/* Elementos a dentro del footer */
+footer a{
+    text-decoration: none;
+    color: white
+}
+/* Apariencia de los elementos a dentro del footer al pasar el ratón por encima */
+footer a:hover{
+  color: dimgray;
+}
+/* Contendor logos redes sociales */
+.social{
+  float: left;
+  text-align: center;
+  width: 20%;
+  margin-left: 58%;
+  margin-top: 13px;
+}
+/* Iconos redes sociales */
+footer a img {
+  width: 20px;
+  height: 20px;
+}
+footer ul li{
+   text-decoration: none;
+   display: block;
+   float: left;
+   margin-left: 4%;
+   margin-top: 12px;
+}
+.relleno_footer{
+  height: 50px;
+  clear: both;
+}
+/******* Fin Footer **********/
+
+
+/****fin pagina principal****/
+
+
+
+@font-face{                             /* fuentes especificas para cada tema/juego */
+    
+    Font-family:"doom";
+    src: url(../fonts/doom.ttf);
+}
+@font-face{
+    Font-family:"diablo";
+    src: url(../fonts/diablo.ttf);
+}
+@font-face{
+    Font-family:"zelda";
+    src: url(../fonts/zelda.ttf);
+}
+@font-face{
+    Font-family:"slime";
+    src: url(../fonts/slime.ttf);
+}
+body{
+    background-size: 100%;
+}
+
+}
+.WIP {                                  /* pagina de work in progress */
+    width: 100%;
+ }
+
+
+/******* comienzo galeria de enlaces de video******/
+
+
+.dark_button{                                       /* div superior para resalte de texto */
+    background-color:rgba(20, 0, 0, 0.59);
+    height: 65px;
+}
+
+.galeria {                                          /* contenedor principal */
+    text-align: center;
+}
+.contenedor-imagenes{                               /* contenedor para las 4 partes */
+    padding-top: 10px;
+    display:flex;
+	width: 85%;
+    margin:auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border-radius: 3px;
+    
+}
+.contenedor-imagenes .imagen{                       /* disposicion de las imagenes en contenedor-imagenes */
+	width: 48%;
+	position: relative;
+	height: 320px;               /* altura de las imagenes */
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .75);
+    
+}
+.imagen img{                    /* propiedades dentro de cada seccion */
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+     
+}
+.parpado{                       /* pantalla de sobreado para poner encima logo, va a tener animacion */
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	background: rgba(8, 0, 0, 0.8);
+	width: 100%;
+	height: 0px;
+	overflow:hidden;           /* oculta si no esta marcada */
+	transition: 0.5s ease;
+	color:#410000;
+	font-weight: 500px;
+	position: absolute;
+	top:50%;   
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);      /* posicion ocultada para hacer la animacion */
+}
+.logo_game{
+    width: 100%;                            /* logo de cada tipo */
+}
+ .logo_game:hover{                          /* resalte animado para dar interactividad */
+    width:100%;
+    transform: scale(0.5);
+    transition: 2s ease; 
+}
+.imagen:hover .parpado{                     /* posicion en la animacion del sombreado parpado */
+	height: 100%;
+	cursor:pointer;
+}
+/* fin galeria de enlaces */
+
+/* FUENTES */
+
+.galeria h1{                /* galeria x4 */
+    color:crimson;
+    font-family: "doom";
+    font-size: 60px;
+    padding-top: 10px;
+}
+.doom_font a{
+    padding-left: 100px;
+    text-decoration: none;
+    color:#8d0000;
+    font-family: "doom";
+    font-size: 70px;
+    bottom: 6%;
+    position: fixed;
+}
+.diablo_font a{
+    padding-left: 100px;
+    text-decoration: none;
+    color:#ff0000;
+    font-family: "diablo";
+    font-size: 100px;
+    bottom: 6%;
+    position: fixed;
+}
+.zelda_font a{
+    padding-left: 100px;
+    text-decoration: none;
+    color:#00268d;
+    font-family: "zelda";
+    font-size: 70px;
+    bottom: 6%;
+    position: fixed;
+}
+.slime_font a{
+    padding-left: 100px;
+    text-decoration: none;
+    color: #4e009b;
+    font-family: "slime";
+    font-size: 100px;
+    bottom: 6%;
+    position: fixed;
+    text-shadow: 0px 0px 3px white;
+}
+
+
+/******* videos de youtube *******/
+
+.vid_youtube{
+    display: block;
+    text-align: center;
+    padding-top: 25px; 
+}
+/******* fin de videos de youtube */
+
+
+
+
+/* comienzo wallpapers */
+/* el contenedor que da formato a las imagenes*/
+.wallpaper {
+  height: 400px;
+  width: 700px;
+  margin:1em;
+  position: relative;
+  display:inline-block;
+}
+/*el formato de las imagenes con una posicion absoluta,sin margenes y con una transcision de 3 segundos en un estilo como de desapareciendo y poniendose la imagen seleccionada*/
+.wallpaper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 3s;
+}
+/*los botones en los cuales podemos seleccionar las imagenes con un formato redondo y con una imagen seleccionada en cada circulo*/
+.wallpaper input[type=radio] {
+  position: relative;
+  bottom:-380px;
+}
+/*el input hace que sea de tipo circular (el boton donde podemos seleccionar las imagenes y el checked que este siempre seleccionada esa imagen al cargar la pag)*/
+.wallpaper input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1) {
+  opacity: 1;
+}
+.wallpaper input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2) {
+  opacity: 1;
+}
+.wallpaper input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3) {
+  opacity: 1;
+}
+.wallpaper input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
+  opacity: 1;
+}
+
+/* fin wallpapers*/
+
+/* Comienzo Noticias*/
+
+/* fomato de las imagenes de las noticias*/
+.fotonoti{
+    float: left;
+    height: 40%;
+    width: 80%;
+    margin-bottom: 1%;
+    margin-top: 8%;
+    margin-left: 5%;
+   
+}
+/*el contenedor donde van las imagenes de las noticias*/
+#fotosnoticias
+
+{
+    float: left;
+    width: 45%;
+    height: auto;
+    
+    
+}
+/*el contenedor del texto de las noticias*/
+#textonoticias {
+    float:left;
+    width: 40%;
+    height: auto;
+    
+}
+/* el formato de texto de las noticias*/
+.noticiastexto a{
+    text-shadow: 0px 0px 1px black;
+    float:left;
+    font-size: 25px;
+    color:darkred;
+    text-decoration: none;
+    margin-top: 100px;    
+}
+/* el contenedor de las cabecera de noticias*/
+.Noticiascabecera{
+    text-align: center;
+    color:darkred;
+    font-size: 50px;
+    font-family: "texto";
+  /*el encuadre de las noticias respecto a las imagenes correspondiente de la noticia*/  
+}
+
+.noticia1 {
+    margin-left: -90px;
+}
+
+.noticia2 {
+    margin-left: -90px;
+    margin-top: 500px;
+}
+
+.noticia3 {
+    margin-left: -90px;
+    margin-top: 500px;    
+}
+
+.noticia4 {
+    margin-left: -90px;
+    margin-top: 400px;
+}
+
+.noticia5 {
+    margin-left: -90px;
+    margin-top: 458px;
+}
+
+.noticia6 {
+    margin-left: -90px;
+    margin-top: 900px;
+}
+/* Fin noticias*/
+
+
+/* JUEGO DIABLO*/
+
+/*fondo de la pagina donde establecemos una foto como imagen,fija, que no repita*/
+.diablo_body { 
+    background-image: url(../img/diablo/fondodia.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: 0;
+}
+/*titulo de diablo 3 una imagen  con brodes en negro*/
+.titulod {
+    display: block;
+    margin: auto;    
+    border-color:black;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+/*texto divididos a la izquierda y derecha de la imagen en parrafos con margenes,texto justificado,con cambio de letra,tamaño y color*/    
+}
+.cards{
+    overflow-y: auto;
+}
+
+.cards .card{
+    font-family: diablo;
+    font-size:24.5px;
+    color: whitesmoke;
+    float: left;
+    padding: 10px;
+    text-align: justify;
+    width: 30%;
+    margin-left: 2%;
+ /*la imagen entre los 2 parrafos es un gif a 1 repeticion con un tamaño definido por el htight y width,con borde de color*/
+    
+}
+.cards .card img{
+    margin-top: 5%;
+    width:100%;
+    height: 800px;
+    border-color: #283747;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    }
+
+/*el titulo de personajes en el cual hemos hecho una especie de fondo con un cuadro con un background de una imagen redondando los bordes y poniendo un texto encima*/
+.personajesdiablo{
+font-family: diablo;
+text-align: center;
+color:whitesmoke; 
+font-size: 60px; 
+text-align: center; 
+background-image: url(../img/diablo/11687.jpg);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size:cover;
+width: 94%;
+height: 100px;
+border-radius: 1000px 1000px 15px 15px;
+margin-left: 3%;
+}
+/*un contenedor de imagenes de las clases seleccionables*/
+#galeriadiablo{
+    float: left;
+    width: 45%;
+    height: auto;
+    margin-top:1%;
+    margin-left: 10%;  
+}
+
+/*el formato de texto de las clases*/
+#textopersonajesdiablo {
+    float:left;
+    width: 40%;
+    height: auto;
+    font-family: diablo;
+    color: whitesmoke;
+    font-size:21px;
+
+}
+/*imagenes de la clase en la cual hemos usado un onmouse/overmouse para que cambie de imagen al sexo femenino de la imagen*/
+.bababa{
+    margin-left: -590px;
+    margin-top:15%;
+}
+/*un boton para llevar a un hypervinculo de la calculadora de talentos de la clase*/
+.boton_calcubaba {
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/*un boton para llevar a un hypervinculo a los talentos de la clase*/
+.boton_talentosbaba{
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/*imagenes de la clase en la cual hemos usado un onmouse/overmouse para que cambie de imagen al sexo femenino de la imagen*/
+.dhdhdh {
+    margin-left: -590px;
+    margin-top:40%;
+}
+/*un boton para llevar a un hypervinculo de la calculadora de talentos de la clase*/
+.boton_calcudh {
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black; 
+}
+/*un boton para llevar a un hypervinculo a los talentos de la clase*/
+.boton_talentosdh{
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/*imagenes de la clase en la cual hemos usado un onmouse/overmouse para que cambie de imagen al sexo femenino de la imagen*/
+.wiwiwi {
+    margin-left: -590px;
+    margin-top:45%;
+}
+/*un boton para llevar a un hypervinculo de la calculadora de talentos de la clase*/
+.boton_calcuwi {
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+   }
+/*un boton para llevar a un hypervinculo a los talentos de la clase*/
+.boton_talentoswi{
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/*imagenes de la clase en la cual hemos usado un onmouse/overmouse para que cambie de imagen al sexo femenino de la imagen*/
+.mbmbmb {
+    margin-left: -590px;
+    margin-top:39%;
+    
+}
+/*un boton para llevar a un hypervinculo de la calculadora de talentos de la clase*/
+.boton_calcumed {
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/*un boton para llevar a un hypervinculo a los talentos de la clase*/
+.boton_talentosmed{
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/*imagenes de la clase en la cual hemos usado un onmouse/overmouse para que cambie de imagen al sexo femenino de la imagen*/
+.momomo {
+    margin-left: -590px;
+    margin-top:45%;
+    margin-bottom: 290px;
+}
+/*un boton para llevar a un hypervinculo de la calculadora de talentos de la clase*/
+.boton_calcumon {
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black 
+}
+/*un boton para llevar a un hypervinculo a los talentos de la clase*/
+.boton_talentosmon{
+    text-decoration: none;
+    padding: 10px;
+    font-family: diablo;
+    font-weight: 600;
+    font-size: 24.5px;
+    color: whitesmoke;
+    background-color: darkred;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+/* hemos usado la cabecera hemos cambiado el sentido del radio de los bordes para finalizar este segmento*/
+.personajes2{
+background-image: url(../img/diablo/11687.jpg);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size:cover;
+overflow: hidden; 
+padding: -10px;
+width: 94%;
+height: 100px;
+border-radius: 15px 15px 1000px 1000px;
+margin-left: 3%;
+}
+ /*hemos mapeado una imagen señalando los rectangulos de cada plataforma para llevar al enlace directo para comprar el juego*/
+.comprardiablo{
+    display: block;
+    margin: auto;
+    margin-bottom: 90px;
+
+}
+/*FIN DE CSS DIABLO*/
+
+
+/*empieza css zelda */
+.Z_body{
+                background-image:url(../img/zelda_html_img/fondo4.png);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size:cover;
+                z-index: 0;
+    
+            }
+.z_contenido{
+    font-family:zelda;
+}
+.z_fondo{
+    width: 100%; /*    respecto a la pantalla del navegador*/
+    height: 100%;
+    margin: auto;
+    overflow: hidden; /*oculta los elementos que sobresalgan del contenedor*/
+    position: fixed;
+}
+.z_fondo ul{
+    
+    display: flex; /*aplica un poco de responsif (que se adapte al tamaño del navegador), */
+    padding:0px;
+    width: 500%;/*es la anchura respecto a su contenedor, el ul tiene 4 veces mas grande para cada foto*/
+    height: 100%;
+     animation: z_cambio 30s infinite alternate linear;
+}
+.z_fondo li{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    
+}
+.z_fondo img{
+    width: 100%;
+    
+}
+@keyframes z_cambio{
+    0%{
+        margin-left: 0px;
+    }
+    15%{
+        margin-left: 0px;
+    }
+    20%{
+        margin-left: -100%;
+    }
+    35%{
+        margin-left: -100%;
+    }
+    40%{
+        margin-left: -200%;
+    }
+    55%{
+        margin-left: -200%;
+    }
+    60%{
+        margin-left: -300%;
+    }
+    75%{
+        margin-left: -300%;
+    }
+    80%{
+        margin-left: -400%;
+    }
+    100%{
+        margin-left: -400%;
+    }
+    
+} 
+            .z_title{
+                position: relative;
+                top:10px;
+            }
+            .z_title img  {
+                position: relative;
+                top:80px;
+            }
+            .z_imgandcompra{
+                float: left;
+                width: 30%;
+                position:relative;
+                top:350px;
+                
+            }
+            .z_imgandcompra img{
+                width: 70%;
+                position: relative;
+                left: 5%;
+            }
+            .z_bottonComp{
+                 position: relative;
+                left: 10%;
+                width: 60%;
+                text-align: center;
+                margin-top: 10px;
+                
+              
+                
+            }
+            .z_bottonComp a {
+              text-decoration: none;  
+                color:white;
+                
+                background-color: red;
+                padding: 10px;
+                padding-left: 15%;
+                padding-right: 15%;
+                
+            }
+
+            
+            .z_text{
+                float: right;
+                width: 70%;
+                position:relative;
+                color: white;
+                top:0px;
+                bottom: 40px;
+                
+            }
+            .z_text h1{
+                text-decoration: underline;
+                color: #ceff00;
+                background-color: rgba(96, 74, 74, 0.57);
+                font-size: 50px;
+            }
+            .z_text p{
+                font-size: 30px;
+                
+            }
+            .z_intro{
+                background-color: rgba(96, 74, 74, 0.47);
+            }
+            .z_historia{
+                margin-top: 30px;
+                background-color: rgba(96, 74, 74, 0.47);
+            }
+            .z_caracteristicas{
+                background-color: rgba(96, 74, 74, 0.47);
+                margin-top: 20px;
+            }
+.z_caracteristicas lu{
+                margin-top: 30px;
+                 font-size: 30px;
+                background-color: rgba(96, 74, 74, 0.47);
+            }
+.z_personajes{
+                margin-top: 30px;
+    position: relative;
+    background-color: rgba(96, 74, 74, 0.47);
+    
+            }
+            .z_personajes img{
+                width: 150px;
+            }
+            .z_pers1{
+                display: inline-block;
+                margin: 10px;
+                
+            }
+            .z_pers1 p{
+                padding-top: 10px;
+            }
+            .z_pers1 img{
+                float: left
+            }
+             .z_pers2{
+                display: inline-block;
+                margin: 10px;
+            }
+            .z_pers2 p{
+                padding-top: 10px;
+            }
+            .z_pers2 img{
+                float: left
+            }
+             .z_pers3{
+                display: inline-block;
+                margin: 10px;
+            }
+            .z_pers3 p{
+                padding-top: 10px;
+            }
+            .z_pers3 img{
+                float: left
+            }
+/*fin css de zelda*/
+
+/*empieza css somos*/
+.QS_body{
+                background-image: url(../img/bg_dark.jpg);
+                background-size: 100%;
+                background-attachment: fixed;
+                color: aqua;
+                
+                
+            }
+            .QS{
+                position: relative;
+                top: 70px;
+                font-size: 28px;
+                z-index: -10;
+            }
+            .QS_intro h1 {
+                text-align: center;
+                
+            }
+            .QS_intro p {
+                text-align: center;
+               
+            }
+            .QS_grupo img{
+               position: relative;
+                left: 40%;
+                width: 300px;
+                height: 300px;
+                
+            }
+            .QS_TODOS{
+                position:relative;
+                width: 100%;
+            
+                
+            }
+            .QS_TODOS h2{
+                text-align: center;
+                
+            }
+            .QS_Persona{
+                position: relative;
+                margin-top: 2%;
+                float: right;
+                width: 100%;
+                
+            }
+           
+
+            .QS_Descripcion{
+                position:relative;
+                background-image: url(../img/quienes_somos/1e10240e8e3f06b81e5b849f39aec540.png);
+                background-size:contain;
+                background-repeat: no-repeat;
+                width:30%;
+                height: 700px;
+                left: 10%;
+                float: left;
+                color: black;
+                padding-top: 0px;
+               
+                
+
+                
+            }
+            .QS_Descripcion ul{
+               list-style-type: none;
+                margin-left: 55px;
+                margin-top: 92px;
+                width: 300px;
+               
+            }
+           
+            }
+            .QS_FOTO{
+                 height: 300px;
+                width: 300px;
+                
+            }
+            .QS_FOTO img {
+                position: relative;
+                right: 25%;
+                float: right;
+                height: 600px;
+                width: 300px;
+            
+                
+                
+            }
+/*fin del css somos*/
+/* TIENDA START */
+
+#cont_img_shop{  /* contenedor principal */
+    
+    
+    width: 98%;
+    height: 650px;
+    position: absolute;
+    
+    padding-left: 12%;
+    
+    margin-bottom: 1%;
+    
+}
+
+.shop_img img{      
+    border-radius: 10px;        /* redondeado para q sea visualmente mas amable */
+    
+    position: relative;
+    width: 35%;
+    float:left;
+    margin: 1% 1% 2% 2%;
+    justify-content: center;
+    
+}
+
+/* ajustes unicos de cada juego en tienda */
+.buy_doom{
+    
+    position: absolute;
+    width: 35%;
+    float:left;
+    color: red;
+    text-shadow: 0px 0px 10px white;
+    text-decoration: none;
+    font-family: "doom";
+    font-size: 120px;
+    padding-left: 6%;
+    padding-top: 5%;
+
+}
+.buy_zelda{
+   
+    position: absolute;
+    width: 35%;
+    float:left;
+    color: #0b5d00;
+    text-shadow: 0px 0px 10px white;
+    text-decoration: none;
+    font-family: "zelda";
+    font-size: 70px;
+    padding-right: 40%;
+    padding-top: 7%;
+    margin-left: 38%;
+    
+}
+.buy_diablo{
+    
+    position: absolute;
+    width: 35%;
+    float:left;
+    color: red;
+    text-shadow: 0px 0px 10px #ceff00;
+    text-decoration: none;
+    font-family: "diablo";
+    font-size: 120px;
+    margin-left: 5%;
+    margin-top: 25%;
+
+}
+.buy_slime{
+    
+    position: absolute;
+    width: 35%;
+    float:right;
+    color: #3b00ff;
+    text-shadow: 0px 0px 10px #ffc786;
+    text-decoration: none;
+    font-family: "slime";
+    font-size: 130px;
+    margin-right: 5%;
+    margin-top: 25%;
+    margin-left: 39%;
+
+}
+
+
+/* TIENDA END */
+
+
+
+/************** Pagina SLIME *******************/
+
+#slime_bg{                  /* fondo */
+    width: 100%;
+    background-image: url(../img/slime_page/Slime_bg.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    position: fixed;
+    overflow:hidden;
+    z-index: -10;       /* sin solapes de contenido */
+    margin-top: 0px;
+}
+
+.guia1{                 /* slime bailarin 1 */
+    width: 15%;
+    margin-top: 2%;
+    position: absolute;
+    margin-left:15%;
+}
+.guia2{                 /* slime bailarin 2 */
+    width: 15%;
+    margin-top: 2%;
+    position: absolute;
+    margin-left: 70%;
+}
+
+#logo_slime{
+    width: 50%;
+    margin-left: 25%;    
+    position: absolute;
+    margin-top: 2%;
+    z-index: 8;
+}
+#logo_2M{               /* 2 millones de ventas sublogo */
+    width: 100%;
+    z-index: 12;
+
+  
+}
+#separador_slime{       /*franja de color */
+    height: 5px;
+    width: 100%;
+    background-color: #7b0091;
+    opacity: 0.2;
+
+}
+.pics_slimes{
+    margin-bottom: 200px;
+     list-style: none;
+    
+}
+
+.pics_slimes img{                       /* 3 imagenes x linea */
+    float:left;
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 20px;
+    margin-bottom: 10%;
+    
+}
+.pics_slimes img:hover{                 /* zoom */
+    transform: scale(1.7);
+    box-shadow: 0px 0px 20px white;
+    cursor: zoom-in;                    /* cursor de zoom */
+}
+.buy_slimes{                            /* zona de los botones de compra */
+    width: 100%;
+     list-style: none;
+    
+}
+.buy_slimes img{                       /* 4 imagenes en linea que llevan a las distitas tiendas con animacion en hover debajo*/
+    float:left;
+    margin-top: 20px;
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+}
+.buy_slimes img:hover{                  /* animacion de resalte en la imagen de link */
+    transform: scale(0.9);
+}
+
+#requisitos_slimes{                     /* contenedor requisitos */
+    width: 100%;
+}
+#requisitos_slimes ul li{                         /* tabla de requisitos texto*/
+    color:#4300af;
+    float:left;
+    margin-top: 20px;
+    width: 23%;
+    margin-left: 10%;
+    list-style: none;
+}
+#requisitos_slimes ul li li{            /* win/mac/linux */
+    font-size: 40px;
+    color: #a50000;
+    width: 100%;
+    text-align:left
+} 
+
+
+#text_content{                          /* requisitos desglosados */
+    margin-top: 300px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 75%;
+    font-family: "slime";
+    font-size: 50px;
+    text-shadow: 0px 0px 2px white;
+    color:#9d0485;
+    
+}
+.p_slime{
+    width: 100%;
+}
+.p01{
+    font-size: 70px;
+}
+
+
+
+/*******FIN pagina Slime********/
+
+
+
+
+/************** Comienzo Página Contacto *************/
+ /* Body de la página */
+.contacto_background{
+  background-image: url(../img/bg_dark.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+ }
+ /* Encabezado de la página de Contacto */
+ .encabezado_formulario{
+  text-align: center;
+  margin-bottom: 2%;
+  color: white;
+ }
+/* Contenedor texto que acompaña al formulario con datos de contacto */
+.texto_formulario{
+  margin-left: 7%;
+  margin-bottom: 2%;
+  width: 40%;
+  color: white;
+  float: left;
+}
+/* Texto dentro del contenedor */
+.texto_formulario p{
+  font-size: 17px;
+  margin-left: 20px;
+}
+/* Contenedor principal con formulario*/
+.formulario{
+  width: 40%;
+  margin-right: 7%;
+  float: right;
+  color: white;
+}
+/* Contenedor que contiene el formulario en sí */
+.formulario_borde{
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px white solid;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: transparent;
+  }
+/* Texto del contenedor con el formulario */
+.formulario p{
+  font-size: 17px;
+  margin-left: 20px;
+}
+/* Le doy apariencia a los input que hay dentro del formulario */
+.formulario input[type=text], input[type=email]{
+  width: 80%;
+  padding: 6px 0px;
+  border-radius: 4px;
+  border: none;
+  background-color:  #f2f2f2;
+  color: black;
+  margin-left: 10%;
+}
+/* Apariencia que tendrán los input que hay dentro del formulario al pasar el ratón por encima*/
+.formulario input[type=text]:hover, input[type=email]:hover{
+  background-color: #999999;
+  transition: 0.3s;
+}
+/* Elemento textarea que hay dentro de formulario */
+.formulario textarea{
+  background-color: #f2f2f2;
+  margin-left: 10%;
+  width: 80%;
+}
+/* Apariencia que tendrá el elemento textarea al pasar el ratón por encima */
+.formulario textarea:hover{
+  background-color: #999999;
+  transition: 0.3s;
+}
+/* Contenedor input submit y reset del formulario */
+.botones_formulario{
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Apariencia que tienen los input submit y reset que hay dentro del formulario */
+.formulario input[type=submit], input[type=reset]{
+  border: none;
+  border-radius: 4px;
+  background-color: #ff6666;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  padding: 7px;
+  width: 25%;
+  }
+  /* Apariencia que tendrán los input que hay dentro del formulario al pasar el ratón por encima*/
+  input[type=submit]:hover, input[type=reset]:hover{
+    background-color: #ff3333;
+    transition: 0.3s;
+  }
+  /* Input tipo radio que hay dentro del formulario */
+  .formulario input[type=radio]{
+    margin-left: 10%;
+  }
+/******** Fin Página Contacto *******/
+/******* Comienzo Página de DOOM Eternal *******/
+/* Cabecera de la página con el logo de DOOM Eternal y una imagen de fondo */
+.logo_doom_eternal{
+  background-image: url(../img/doom/doom_bg.jpg);
+  background-size: cover;
+  border-bottom: 1px black solid;
+}
+/* Logo de DOOM Eternal de la Cabecera de la página */
+.logo_doom_eternal img{
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  /*margin-left: auto;*/
+}
+/* Contenedor principal que contiene las características del juego y una imagen de fondo 
+que cubre todo el contenedor y se queda fija*/
+.background_doom{
+  background-image: url(../img/doom/slayer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 2070px;
+  padding: 2%;
+  background-attachment: fixed;
+}
+/* Características del juego */
+.doom_contenido{
+  background-image: url(../img/doom/fondo_lava.jpg);
+  border-radius: 5px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  margin-top: 2%;
+}
+/*Establezco la altura de cada contenedor por separado porque en algunos el texto ocupa más espacio que en otros*/
+.doom_altura1{ 
+  height: 430px;
+}
+.doom_altura2{
+  height: 420px;
+}
+.doom_altura3{
+  height: 462px;
+}
+.doom_altura4{
+  height: 320px;
+}
+/* Título del contenedor con las características del juego*/
+.doom_contenido h3{
+  padding-bottom: 0px;
+  font-family: doom;
+  font-size: 240%;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 62%;
+  margin-left: auto;
+  margin-right: auto;
+  color:  #cccccc;
+  background-color: rgba(26, 26, 26, 0.3);
+}
+/* Imagen del contenedor con las características del juego*/
+.doom_contenido img{
+  width: 44%;
+  float: right;
+  margin-top: 27px;
+  box-shadow: 10px 10px 10px black;
+}
+/* Texto del contenedor con las características del juego*/
+.doom_contenido p{
+  font-size: 200%;
+  margin-top: 20px;
+  margin-right: 46%;
+  font-family: doom;
+  color: #cccccc;
+  letter-spacing: 1px;
+  background-color: rgba(26, 26, 26, 0.3);
+}
+
+/* Contenedor principal sección ediciones especiales del juego */
+.contenedor_ediciones{
+  padding: 2%;
+  background-image: url(../img/doom/doom_bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px black solid
+}
+/* Contenedor que muestra las ediciones especiales */
+.edicion_seleccionar{
+  height: 500px;
+  width: 65%;
+  font-family: doom;
+  font-size: 220%;
+  letter-spacing: 2px; /*Añade un espacio de 2px entre las letras del texto*/
+  background-image: url(../img/doom/fondo_lava.jpg);
+  border-radius: 5px;
+  padding: 15px;
+  position: relative; /* Establezco position relative para que actúe como punto de anclaje 
+  para los botones en position absolute que he colocado después*/
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+/* Imagen del contenedor que muestra las ediciones especiales */
+.edicion_seleccionar img{
+  height: 88%;
+  width: 38%;
+  float: left;
+  box-shadow: -10px 10px 10px black; /* Sombreado, con -10px 10px indico que quiero el sombreado 
+  a la izquierda y abajo. El 10px restante es para darle un efecto difuminado a la sombra y black para que sea de 
+  color negro */ 
+}
+/* Título del contenedor que muestra las ediciones especiales */
+.edicion_seleccionar h3{
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.3);
+  color:  #cccccc;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Texto del contenedor que muestra las ediciones especiales */
+.edicion_seleccionar p{
+ margin-top: 20px;
+ margin-left: 42%;
+ text-align: left;
+ letter-spacing: 0px;
+ color: #cccccc;
+ background-color: rgba(26, 26, 26, 0.4);
+}
+/* Contenedor con los botones, utilizado para posicionar los tres botones de forma conjunta */
+.contenedor_botones_doom{
+  margin-left: 41%;
+  bottom: 25px;
+  position: absolute; /* Se posiciona de acuerdo con el ancestro posicionado más cercano, en este caso
+  el contenedor con la class .edicion_seleccionar */
+}
+/* Botones del contenedor, aquí establezco la apariencia que tienen */
+.contenedor_botones_doom button{
+  font-family: doom;
+  font-size: 30px;
+  padding: 10px 10px 0px 10px;
+  background-color: #1a1a1a;
+  border-style: none;
+  border-radius: 6px;
+  color: #cccccc;
+  box-shadow: -10px 10px 10px black;
+}
+/* Botones del contenedor, aquí establezco la apariencia van a tener al pasar el ratón por encima */
+.contenedor_botones_doom button:hover{
+  color: #ff3300;
+  background-color: #0d0d0d;
+  transition: 0.2s;
+}
+/********** Fin Página DOOM Eternal ******************/
+
+
+
